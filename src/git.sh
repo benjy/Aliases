@@ -1,0 +1,11 @@
+# Git
+alias aa="git add -A ."
+alias gc="git commit -m "
+alias co="git checkout "
+alias gp="git pull origin "
+alias gpm="gp master"
+alias pm="git push origin master"
+alias gb="git branch"
+alias gs="git status"
+alias p="git push origin "
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

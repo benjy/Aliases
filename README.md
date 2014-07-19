@@ -1,0 +1,1 @@
+This repository contains my shell aliases. Feel free to use as you like.
