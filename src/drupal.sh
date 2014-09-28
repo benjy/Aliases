@@ -59,9 +59,14 @@ function clean-up() {
 }
 
 # Create a patch based on the branch name.
-function cpatch() {
-    branch=$(git rev-parse --abbrev-ref HEAD)
-    git diff 8.x > ~/patches/$branch"_"$1.patch
+function dp() {
+    branch=`git rev-parse --symbolic-full-name --abbrev-ref HEAD`
+    git diff 8.0.x > ~/patches/$branch-$1.patch
+}
+
+# Create an interdiff based on the current working state. Won't capture new files unless you git add -N
+function interdiff() {
+    git diff > ~/patches/interdiff.txt
 }
 
 # alias for commit contrib modules.
