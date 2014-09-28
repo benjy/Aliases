@@ -64,7 +64,12 @@ function interdiff() {
     git diff > ~/patches/interdiff.txt
 }
 
-# alias for commit contrib modules.
+# Indicate you're commiting a contrib module.
 function cgc() {
     git commit -m "[CONTRIB] - $1";
+}
+
+# Indicate you're commit a feature.
+function fgc() {
+    git commit -m "[FEATURES] - $1";
 }

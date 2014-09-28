@@ -73,11 +73,6 @@ function run-tests() {
   php core/scripts/run-tests.sh --verbose --url "http://localhost/${PWD##*/}" --class "$1"
 }
 
-# Rebuild PHPStorm hooks.
-function drupal-hooks() {
-  find . -name \*.php | xargs grep -l '^function hook_' | xargs ~/parse_drupal_api.pl > ~/Library/Preferences/WebIde60/templates/user.xml
-}
-
 # Apply a remote patch.
 function dpatch() {
   curl $1 | git apply
@@ -136,9 +131,14 @@ function interdiff() {
     git diff > ~/patches/interdiff.txt
 }
 
-# alias for commit contrib modules.
+# Indicate you're commiting a contrib module.
 function cgc() {
     git commit -m "[CONTRIB] - $1";
+}
+
+# Indicate you're commit a feature.
+function fgc() {
+    git commit -m "[FEATURES] - $1";
 }
 
 # Drush
