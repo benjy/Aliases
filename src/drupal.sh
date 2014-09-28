@@ -6,11 +6,6 @@ function run-tests() {
   php core/scripts/run-tests.sh --verbose --url "http://localhost/${PWD##*/}" --class "$1"
 }
 
-# Rebuild PHPStorm hooks.
-function drupal-hooks() {
-  find . -name \*.php | xargs grep -l '^function hook_' | xargs ~/parse_drupal_api.pl > ~/Library/Preferences/WebIde60/templates/user.xml
-}
-
 # Apply a remote patch.
 function dpatch() {
   curl $1 | git apply
