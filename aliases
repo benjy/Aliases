@@ -75,7 +75,7 @@ function run-tests() {
 
 # Apply a remote patch.
 function dpatch() {
-  curl $1 | git apply
+  curl $1 | git apply --index
 }
 
 # Re-install Drupal 8
