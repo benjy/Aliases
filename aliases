@@ -67,6 +67,10 @@ fi
 
 alias drupal-htaccess="wget -q --no-check-certificate -t 3 https://raw.github.com/drupal/drupal/7.x/.htaccess"
 alias drupal-updates="drush up -n | grep -ir 'available'"
+alias drush8="cd /usr/local/drush/; git checkout master; git pull origin master; drush cache-clear drush; cd -"
+alias drush7="cd /usr/local/drush/; git checkout 6.x; drush cache-clear drush; cd -"
+# Thanks Alex, http://chapterthree.com/blog/open-your-drupalorg-issue-automatically-your-git-repository
+alias issue="open /Applications/Google\ Chrome.app https://www.drupal.org/node/\$(git symbolic-ref -q HEAD 2>/dev/null | sed 's/^refs\/heads\/\([0-9]*\).*/\1/')"
 
 # Run simpletest with run-tests. (D8)
 function run-tests() {
@@ -94,10 +98,10 @@ function drupal8-install() {
     sudo git checkout -- sites/default;
     # But still ensure that we own the folder
     sudo chown -R `whoami` sites/default;
- 
+
     # Uncomment this to stop here so you can install the UI
     #exit;
- 
+
     # If you run this command with an argument, it will be the name of the DB
     if [ $1 ] ; then
         drush si --db-url=mysql://root:@localhost/$1 -y
