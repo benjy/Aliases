@@ -48,7 +48,7 @@ function drupal8-install() {
 
 # D7 install
 function d7-install() {
-  drush site-install -y $2 --db-url=mysql://root:@127.0.0.1/$1 --site-name="Default Install"
+  drush site-install -y --db-url=mysql://root:@127.0.0.1/$1 --site-name="Default Install"
 }
 
 # Clean up old/new branch used for rebasing.
