@@ -18,7 +18,7 @@ function dpatch() {
 # Re-install Drupal 8
 function drupal8-install() {
     # Remove existing database
-    drush sql-drop -y --db-url=mysql://root:@127.0.0.1/$1;
+    drush sql-drop -y --db-url=mysql://root:@mysql/$1;
     # Remove existing install
     sudo rm -rf sites/default;
     # Restore the sites/default/default.settings.php file
@@ -37,9 +37,9 @@ function drupal8-install() {
 
     # If you run this command with an argument, it will be the name of the DB
     if [ $1 ] ; then
-        drush si --db-url=mysql://root:@localhost/$1 -y
+        drush si --db-url=mysql://root:@mysql/$1 -y
     else
-        drush si --db-url=mysql://root:@localhost/d8 -y
+        drush si --db-url=mysql://root:@mysql/d8 -y
     fi
     # Install and uninstall common modules
     drush en simpletest -y
