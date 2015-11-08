@@ -7,7 +7,7 @@ alias issue="open /Applications/Google\ Chrome.app https://www.drupal.org/node/\
 
 # Run simpletest with run-tests. (D8)
 function run-tests() {
-  sudo -u _www php core/scripts/run-tests.sh --verbose --url "http://localhost/${PWD##*/}" --class "$1"
+  php ./core/scripts/run-tests.sh --non-html --color --verbose --dburl sqlite://localhost//tmp/test.sqlite --sqlite /tmp/test.sqlite --class "$1"
 }
 
 # Apply a remote patch.
