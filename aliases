@@ -165,6 +165,7 @@ alias pm="git push origin master"
 alias gb="git branch"
 alias gs="git status"
 alias p="git push origin "
+alias pc="git push origin HEAD"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Random Crap
