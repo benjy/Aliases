@@ -192,11 +192,24 @@ csscount() {
 
     echo $cnt
 }
+
+function weather() {
+  curl -4 http://wttr.in/$1
+}
+
 # Shell
 alias c='clear'
 alias wget='wget --content-disposition'
 alias ll='ls -lAhGp'
 alias x='exit'
+
+function newmac() {
+    sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
+}
+
+alias vh="vagrant halt"
+alias vu="vagrant up"
+alias vbox="VBoxManage list runningvms"
 
 # Commit in format for work. Redmine commit.
 function rc() {
