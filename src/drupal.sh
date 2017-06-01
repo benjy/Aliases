@@ -65,7 +65,7 @@ function dp() {
 
 # Create an interdiff based on the current working state. Won't capture new files unless you git add -N
 function interdiff() {
-    git diff > ~/patches/interdiff.txt
+    git diff > ~/patches/interdif.txt
 }
 
 # Indicate you're commiting a contrib module.

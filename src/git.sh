@@ -2,6 +2,7 @@
 alias aa="git add -A ."
 alias gc="git commit -m "
 alias co="git checkout "
+alias bt="git checkout -"
 alias gp="git pull origin "
 alias gpm="gp master"
 alias pm="git push origin master"
