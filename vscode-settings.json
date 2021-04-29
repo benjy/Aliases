@@ -1,0 +1,52 @@
+// Place your settings in this file to overwrite the default settings
+{
+"editor.fontSize": 15,
+"editor.lineHeight": 30,
+"workbench.iconTheme": "material-icon-theme",
+"php.suggest.basic": false,
+"workbench.colorTheme": "Quiet Light",
+"explorer.openEditors.visible": 0,
+"editor.minimap.enabled": false,
+"python.disablePromptForFeatures": [
+    "pylint"
+],
+"javascript.updateImportsOnFileMove.enabled": "always",
+"flow.useNPMPackagedFlow": true,
+"javascript.validate.enable": false,
+"jest.autoEnable": false,
+"breadcrumbs.enabled": true,
+"terminal.integrated.inheritEnv": false,
+"files.associations": {
+    "Makefile-container": "makefile"
+},
+"typescript.tsdk": "./node_modules/typescript/lib",
+"flow.enabled": true,
+"typescript.updateImportsOnFileMove.enabled": "always",
+"[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+},
+"[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+},
+"workbench.editorAssociations": [
+    {
+        "viewType": "jupyter.notebook.ipynb",
+        "filenamePattern": "*.ipynb"
+    }
+],
+"editor.suggestSelection": "first",
+"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+"python.languageServer": "Pylance",
+"[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4  
+}
+}
+
